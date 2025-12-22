@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>事業部カジュアル面談 | CLINKS株式会社IE事業部</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CLINKS株式会社IE事業部のカジュアル面談のご案内。IT業界や当社のリアルを、選考の前にフラットに話せる場です。履歴書不要・情報収集だけでも歓迎。">
+  <!-- 検索エンジンにインデックスさせない設定 -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-bg: #050816;
+      --color-surface: #0b1020;
+      --color-surface-alt: #0f172a;
+      --color-primary: #2563eb;
+      --color-primary-soft: rgba(37, 99, 235, 0.12);
+      --color-accent: #22d3ee;
+      --color-text: #e5e7eb;
+      --color-text-soft: #9ca3af;
+      --color-border: #1f2937;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --radius-pill: 999px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.85);
+      --shadow-subtle: 0 10px 30px rgba(15, 23, 42, 0.6);
+      --transition-fast: 0.18s ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Noto Sans JP', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--color-text);
+      background: radial-gradient(circle at top, #1d3557 0, #050816 45%, #020617 100%);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Layout */
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(18px);
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 55%)
+        , linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.86));
+      border-bottom: 1px solid rgba(31, 41, 55, 0.85);
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 14px;
+      background: conic-gradient(from 150deg, #22d3ee, #2563eb, #7c3aed, #22d3ee);
+      position: relative;
+      box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.4), 0 10px 30px rgba(15, 23, 42, 0.8);
+    }
+
+    .logo-mark::after {
+      content: "";
+      position: absolute;
+      inset: 4px;
+      border-radius: 12px;
+      background: radial-gradient(circle at 25% 0, rgba(226, 232, 240, 0.9), rgba(15, 23, 42, 0.1));
+      mix-blend-mode: screen;
+    }
+
+    .logo-text-main {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+    }
+
+    .logo-text-sub {
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+
+    .nav-link {
+      position: relative;
+      padding: 2px 0;
+      cursor: pointer;
+      transition: color var(--transition-fast);
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #22d3ee, #2563eb);
+      border-radius: 999px;
+      transition: width var(--transition-fast);
+    }
+
+    .nav-link:hover {
+      color: #e5e7eb;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 64, 175, 0.9));
+      color: #e5e7eb;
+      font-size: 12px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: var(--shadow-subtle);
+      cursor: pointer;
+      transition: transform 0.13s ease-out, box-shadow 0.13s ease-out, border-color 0.13s ease-out;
+    }
+
+    .nav-cta span.icon {
+      display: inline-flex;
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      background: radial-gradient(circle at 30% 0, #e0f2fe, #22d3ee);
+      color: #0f172a;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.9);
+      border-color: rgba(56, 189, 248, 0.7);
+    }
+
+    .nav-cta:active {
+      transform: translateY(0);
+      box-shadow: var(--shadow-subtle);
+    }
+
+    /* Hero */
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.3fr);
+      gap: 32px;
+      align-items: center;
+      padding: 40px 0 40px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      color: #a5b4fc;
+      padding: 4px 10px 4px 4px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(129, 140, 248, 0.5);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.8);
+      margin-bottom: 16px;
+    }
+
+    .hero-badge-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 0, #bbf7d0, #22c55e);
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.3);
+    }
+
+    .hero-title {
+      font-size: clamp(28px, 4vw, 36px);
+      line-height: 1.35;
+      font-weight: 700;
+      letter-spacing: .02em;
+      margin: 0 0 16px;
+    }
+
+    .hero-title span.accent {
+      background: linear-gradient(120deg, #22d3ee, #38bdf8, #6366f1);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-lead {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--color-text-soft);
+      margin-bottom: 22px;
+    }
+
+    .hero-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
+      font-size: 11px;
+    }
+
+    .chip {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: radial-gradient(circle at top, rgba(148, 163, 184, 0.26), rgba(15, 23, 42, 0.7));
+      color: #e5e7eb;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .chip-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22d3ee;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .btn-primary {
+      padding: 12px 20px;
+      border-radius: var(--radius-pill);
+      border: none;
+      outline: none;
+      background: linear-gradient(130deg, #22d3ee, #2563eb);
+      color: #0b1120;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+      transition: transform 0.17s ease-out, box-shadow 0.17s ease-out, filter 0.17s ease-out;
+    }
+
+    .btn-primary span.icon {
+      display: inline-flex;
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.04);
+      box-shadow: 0 25px 60px rgba(15, 23, 42, 0.96);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .btn-ghost {
+      padding: 10px 16px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      background: rgba(15, 23, 42, 0.75);
+      color: #e5e7eb;
+      font-size: 13px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: background var(--transition-fast), border-color var(--transition-fast), transform 0.13s ease-out;
+    }
+
+    .btn-ghost span.icon {
+      font-size: 14px;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(30, 64, 175, 0.85);
+      border-color: rgba(96, 165, 250, 0.9);
+      transform: translateY(-1px);
+    }
+
+    .hero-note {
+      font-size: 11px;
+      color: #6b7280;
+    }
+
+    .hero-note strong {
+      color: #e5e7eb;
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .glass-card {
+      position: relative;
+      padding: 20px 18px;
+      border-radius: 24px;
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.22), rgba(15, 23, 42, 0.9));
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+    }
+
+    .glass-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      opacity: 0.18;
+      background:
+        radial-gradient(circle at 20% 0%, #38bdf8 0, transparent 55%),
+        radial-gradient(circle at 80% 10%, #a855f7 0, transparent 55%);
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+
+    .glass-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .glass-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      gap: 8px;
+    }
+
+    .glass-title {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+    }
+
+    .status-pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(34, 197, 94, 0.7);
+      color: #bbf7d0;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 0, #dcfce7, #22c55e);
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.35);
+    }
+
+    .talk-bubbles {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .bubble {
+      max-width: 100%;
+      padding: 10px 12px;
+      border-radius: 14px;
+      font-size: 12px;
+      line-height: 1.6;
+      display: inline-flex;
+      align-items: flex-start;
+      gap: 8px;
+      background: rgba(15, 23, 42, 0.78);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      backdrop-filter: blur(12px);
+    }
+
+    .bubble.me {
+      margin-left: auto;
+      background: rgba(37, 99, 235, 0.8);
+      border-color: rgba(191, 219, 254, 0.9);
+      color: #eff6ff;
+    }
+
+    .bubble-icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      background: rgba(15, 23, 42, 0.9);
+      color: #e5e7eb;
+      flex-shrink: 0;
+    }
+
+    .bubble.me .bubble-icon {
+      background: rgba(15, 23, 42, 0.95);
+      color: #bfdbfe;
+    }
+
+    .bubble-text {
+      flex: 1;
+    }
+
+    .bubble-label {
+      font-size: 10px;
+      opacity: .7;
+      margin-bottom: 2px;
+    }
+
+    .bubble-body {
+      font-size: 12px;
+    }
+
+    .glass-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: #9ca3af;
+      margin-top: 4px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: rgba(15, 23, 42, 0.75);
+    }
+
+    .score {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(52, 211, 153, 0.6);
+      background: rgba(6, 95, 70, 0.7);
+      color: #a7f3d0;
+    }
+
+    /* Sections */
+
+    section {
+      margin-top: 56px;
+    }
+
+    .section-header {
+      margin-bottom: 16px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .section-desc {
+      font-size: 13px;
+      color: var(--color-text-soft);
+    }
+
+    .section-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .section-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .card {
+      padding: 16px 16px 18px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(145deg, rgba(15, 23, 42, 0.98), rgba(15, 23, 42, 0.9));
+      border: 1px solid rgba(31, 41, 55, 0.95);
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.85);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.17s ease-out, box-shadow 0.17s ease-out, border-color 0.17s ease-out;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      opacity: 0;
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.2), transparent 60%);
+      transition: opacity 0.3s ease-out;
+      pointer-events: none;
+    }
+
+    .card:hover {
+      transform: translateY(-2px) translateZ(0);
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.95);
+      border-color: rgba(59, 130, 246, 0.8);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      background: radial-gradient(circle at 30% 0, rgba(226, 232, 240, 0.9), rgba(59, 130, 246, 0.8));
+      color: #0b1120;
+      margin-bottom: 10px;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .card-text {
+      font-size: 13px;
+      color: var(--color-text-soft);
+      line-height: 1.7;
+    }
+
+    ul.clean {
+      list-style: none;
+      padding-left: 0;
+      margin: 10px 0 0;
+    }
+
+    ul.clean li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 6px;
+      font-size: 13px;
+      color: var(--color-text-soft);
+    }
+
+    ul.clean li::before {
+      content: "•";
+      position: absolute;
+      left: 4px;
+      top: 0;
+      color: #60a5fa;
+    }
+
+    .flow-steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .step {
+      padding: 16px 16px 18px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(150deg, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.9));
+      border: 1px solid rgba(31, 41, 55, 0.95);
+      box-shadow: var(--shadow-subtle);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.17s ease-out, box-shadow 0.17s ease-out, border-color 0.17s ease-out;
+    }
+
+    .step::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      opacity: 0;
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 60%);
+      transition: opacity 0.3s ease-out;
+      pointer-events: none;
+    }
+
+    .step:hover {
+      transform: translateY(-2px);
+      border-color: rgba(59, 130, 246, 0.9);
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.96);
+    }
+
+    .step:hover::before {
+      opacity: 1;
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 0, #e5e7eb, #60a5fa);
+      color: #0b1120;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .step-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .step-text {
+      font-size: 13px;
+      color: var(--color-text-soft);
+      line-height: 1.7;
+    }
+
+    .faq-list {
+      margin-top: 18px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .faq-item {
+      padding: 12px 14px 13px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(31, 41, 55, 0.95);
+      background: rgba(15, 23, 42, 0.9);
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.85);
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .faq-item:hover {
+      border-color: rgba(59, 130, 246, 0.9);
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.96);
+      transform: translateY(-1px);
+    }
+
+    .faq-q {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .faq-a {
+      font-size: 13px;
+      color: var(--color-text-soft);
+      line-height: 1.7;
+    }
+
+    .cta {
+      margin-top: 48px;
+      padding: 20px 18px 22px;
+      border-radius: 24px;
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.16), rgba(15, 23, 42, 0.98));
+      border: 1px solid rgba(59, 130, 246, 0.8);
+      box-shadow: 0 28px 70px rgba(15, 23, 42, 0.98);
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 20px;
+      align-items: center;
+    }
+
+    .cta-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .cta-text {
+      font-size: 13px;
+      color: var(--color-text-soft);
+      margin-bottom: 12px;
+    }
+
+    .cta-note {
+      font-size: 11px;
+      color: #94a3b8;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .cta-secondary {
+      font-size: 12px;
+      color: #cbd5f5;
+    }
+
+    .cta-secondary a {
+      color: #7dd3fc;
+      text-decoration: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 3px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(31, 41, 55, 0.85);
+      font-size: 11px;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    /* Utilities */
+
+    .mt-small {
+      margin-top: 10px;
+    }
+
+    .inline-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.85);
+      font-size: 11px;
+      color: #e5e7eb;
+    }
+
+    .inline-tag span.dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22d3ee;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        padding-top: 26px;
+      }
+      .hero-visual {
+        order: -1;
+      }
+      .cta {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .page {
+        padding: 0 16px 64px;
+      }
+      .hero {
+        gap: 24px;
+      }
+      section {
+        margin-top: 44px;
+      }
+      .section-grid-3,
+      .flow-steps {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .section-grid-2 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .btn-primary,
+      .btn-ghost {
+        justify-content: center;
+        width: 100%;
+      }
+      .cta-actions {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="nav-left">
+      <div class="logo-mark"></div>
+      <div>
+        <div class="logo-text-main">CLINKS株式会社IE事業部</div>
+        <div class="logo-text-sub">IE Division Casual Session</div>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#about" class="nav-link">カジュアル面談とは</a>
+      <a href="#target" class="nav-link">対象の方</a>
+      <a href="#flow" class="nav-link">当日の流れ</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <a href="#entry" class="nav-cta">
+        <span class="icon">★</span>
+        面談を申し込む
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div>
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        <span>選考前に「実際どうなの？」を直接聞ける場</span>
+      </div>
+      <h1 class="hero-title">
+        ITキャリアの<span class="accent">「リアル」</span>を、<br>
+        フラットに話せる場所。
+      </h1>
+      <p class="hero-lead">
+        事業部メンバーとざっくばらんに話しながら、<br>
+        仕事内容や働き方、キャリアの可能性を一緒に考える。<br>
+        それが、CLINKS株式会社IE事業部の「カジュアル面談」です。
+      </p>
+
+      <div class="hero-highlights">
+        <div class="chip">
+          <span class="chip-dot"></span> 履歴書・職務経歴書は不要
+        </div>
+        <div class="chip">
+          <span class="chip-dot"></span> 情報収集だけの参加も歓迎
+        </div>
+        <div class="chip">
+          <span class="chip-dot"></span> 本社会議室またはオンラインで実施
+        </div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#entry" class="btn-primary">
+          <span>カジュアル面談に申し込む</span>
+          <span class="icon">→</span>
+        </a>
+        <a href="#about" class="btn-ghost">
+          <span class="icon">👀</span>
+          <span>詳しい内容を見る</span>
+        </a>
+      </div>
+
+      <div class="hero-note">
+        <strong>選考ではなく「対話」から。</strong><br>
+        参加を希望される方は、このページを案内してくれたCLINKS社員に直接お伝えいただくか、
+        ページ下部のメールアドレス宛にご連絡ください。
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="glass-card">
+        <div class="glass-inner">
+          <div class="glass-header">
+            <div>
+              <div class="glass-title">Business Casual Session</div>
+              <div style="font-size:11px;color:#9ca3af;">IT業界・仕事内容・働き方のリアルを、率直に。</div>
+            </div>
+            <div class="status-pill">
+              <span class="status-dot"></span>
+              Now Accepting
+            </div>
+          </div>
+
+          <div class="talk-bubbles">
+            <div class="bubble">
+              <div class="bubble-icon">Q</div>
+              <div class="bubble-text">
+                <div class="bubble-label">候補者</div>
+                <div class="bubble-body">
+                  仕事内容って具体的にどんなことをするんですか？<br>
+                  未経験の部分も多いので少し不安で…。
+                </div>
+              </div>
+            </div>
+            <div class="bubble me">
+              <div class="bubble-icon">A</div>
+              <div class="bubble-text">
+                <div class="bubble-label">事業部メンバー</div>
+                <div class="bubble-body">
+                  実際のプロジェクト事例や、1日の流れをベースに<br>
+                  「できること」「これから身につけていくこと」を一緒に整理していきましょう。
+                </div>
+              </div>
+            </div>
+            <div class="bubble">
+              <div class="bubble-icon">Q</div>
+              <div class="bubble-text">
+                <div class="bubble-label">候補者</div>
+                <div class="bubble-body">
+                  チームの雰囲気や、人間関係ってどんな感じですか？
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-footer">
+            <div class="tags">
+              <div class="tag">業界のことから聞いてOK</div>
+              <div class="tag">選考への申込はその場で決めなくて大丈夫</div>
+            </div>
+            <div class="score">
+              <span>安心感</span>
+              <span style="font-weight:600;">◎</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-header">
+      <div class="section-label">About</div>
+      <h2 class="section-title">事業部カジュアル面談とは？</h2>
+      <p class="section-desc">
+        CLINKS株式会社IE事業部のカジュアル面談は、選考プロセスではなく、<br>
+        <strong>IT業界や当社のことをフラットに話すための「情報交換の場」</strong> です。
+      </p>
+    </div>
+
+    <div class="section-grid-2">
+      <div class="card">
+        <div class="card-icon">◎</div>
+        <div class="card-title">選考ではなく「対話」からはじめる</div>
+        <div class="card-text">
+          一方的な会社説明会でも、堅い面接の場でもありません。<br>
+          事業部のメンバーが、仕事内容や働き方、キャリアの可能性をできるだけ率直にお伝えします。<br><br>
+          「いきなり応募はハードルが高い」「まず雰囲気を知りたい」といった方に向けた場です。
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">✕</div>
+        <div class="card-title">履歴書・スキルシートは不要</div>
+        <div class="card-text">
+          事前に必要なのは、<strong>「興味」と「聞きたいこと」だけ</strong>。<br>
+          履歴書や職務経歴書、スキルシートのご準備は不要です。<br><br>
+          面談の結果、「今は応募しない」という選択になっても問題ありません。
+          情報収集の一環として、ご活用ください。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TARGET -->
+  <section id="target">
+    <div class="section-header">
+      <div class="section-label">For Whom</div>
+      <h2 class="section-title">こんな方におすすめです</h2>
+      <p class="section-desc">
+        社員の友人・知人・ご家族、オンラインでつながりのある方など、どなたでも歓迎です。<br>
+        以下のうち、ひとつでも当てはまる方はぜひご検討ください。
+      </p>
+    </div>
+
+    <div class="section-grid-3">
+      <div class="card">
+        <div class="card-icon">💡</div>
+        <div class="card-title">IT業界に興味がある</div>
+        <div class="card-text">
+          - IT業界に就職・転職したいが、<strong>業界のことをもっと知りたい</strong><br>
+          - どんな職種があって、自分にどんな可能性があるのか知りたい
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🤝</div>
+        <div class="card-title">知り合いがいる環境だと安心</div>
+        <div class="card-text">
+          - 就職・転職先に<strong>知り合いがいると心強い</strong>と感じている<br>
+          - 会社の雰囲気や人間関係を、ネット情報だけで判断したくない
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🧭</div>
+        <div class="card-title">転職・キャリアを迷っている</div>
+        <div class="card-text">
+          - 転職を考えているけれど、<strong>今動くべきかどうか迷っている</strong><br>
+          - 企業の役職者の話を聞いてから、具体的な転職活動を考えたい
+        </div>
+      </div>
+    </div>
+
+    <div class="section-grid-2 mt-small">
+      <div class="card">
+        <div class="card-icon">📈</div>
+        <div class="card-title">キャリアの選択肢を整理したい</div>
+        <div class="card-text">
+          - 自分の経験・スキルで、どのようなキャリアの道があるのか知りたい<br>
+          - IT未経験・異業種からのチャレンジ事例を聞いてみたい
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔍</div>
+        <div class="card-title">「実際どうなの？」を直接聞きたい</div>
+        <div class="card-text">
+          - 実際のプロジェクト内容や、日々の業務のイメージをつかみたい<br>
+          - 働き方・評価・チームの雰囲気について、率直に質問したい
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUESTIONS / MOYAMOYA -->
+  <section id="questions">
+    <div class="section-header">
+      <div class="section-label">Real Questions</div>
+      <h2 class="section-title">みなさんが最初に抱く「モヤモヤ」</h2>
+      <p class="section-desc">
+        資料や求人票だけでは分からないことを、直接聞けるのがカジュアル面談です。
+      </p>
+    </div>
+
+    <div class="section-grid-2">
+      <div class="card">
+        <div class="card-icon">❓</div>
+        <div class="card-title">こんな疑問、ありませんか？</div>
+        <ul class="clean">
+          <li>仕事内容って何だろう？</li>
+          <li>自分にできるのか不安…</li>
+          <li>規則は厳しいのか？</li>
+          <li>人間関係はどうなのか？</li>
+          <li>会社として安定しているのか？</li>
+          <li>転職に不安がある…</li>
+        </ul>
+        <p class="card-text" style="margin-top:8px;">
+          こうした不安や疑問を、ネットの情報だけで解消するのはなかなか難しいものです。<br>
+          カジュアル面談では、これらの質問を<strong>そのままぶつけていただいて構いません</strong>。
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">💬</div>
+        <div class="card-title">面談でお話しできること</div>
+        <ul class="clean">
+          <li>当社および事業部の事業内容・今後の方向性</li>
+          <li>具体的な仕事内容と、1日の仕事の流れ</li>
+          <li>一緒に働くメンバー・チームの雰囲気</li>
+          <li>キャリアパス・評価の考え方</li>
+          <li>働き方（勤務時間、リモート有無、残業時間目安など）</li>
+          <li>IT未経験・異業種からのチャレンジ事例</li>
+          <li>転職・就職全般に関するご相談</li>
+        </ul>
+        <p class="card-text" style="margin-top:8px;">
+          「こんなこと聞いてもいいのかな？」という内容ほど歓迎です。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOW -->
+  <section id="flow">
+    <div class="section-header">
+      <div class="section-label">Flow</div>
+      <h2 class="section-title">カジュアル面談の流れ</h2>
+      <p class="section-desc">
+        お申し込みから当日までの流れは、とてもシンプルです。
+      </p>
+    </div>
+
+    <div class="flow-steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-title">参加希望のご連絡</div>
+        <div class="step-text">
+          このページを案内してくれた<strong>CLINKS社員に</strong>、<br>
+          「カジュアル面談を受けてみたい」とお伝えください。<br><br>
+          あわせて、下記を共有いただけると日程調整がスムーズです。
+          <ul class="clean">
+            <li>お名前</li>
+            <li>現在のご状況（就業中／就学中 など）</li>
+            <li>面談希望日時（平日・日中／夕方以降など、2～3候補）</li>
+          </ul>
+          社員からの案内ではなく、このページをきっかけに興味を持っていただいた方は、<br>
+          ページ下部に記載のメールアドレス（<strong>sh-suzuki@clinks.jp</strong>）宛に、
+          同様の内容をご連絡ください。
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-title">日程の調整・ご連絡</div>
+        <div class="step-text">
+          お伝えいただいた候補日をもとに、事業部側で日程を調整し、<br>
+          確定した日時と実施方法（対面／オンライン）を、
+          CLINKS社員またはメールにてご連絡します。<br><br>
+          - 面談場所：本社会議室を予定（オンライン希望もご相談ください）<br>
+          - 日中帯・夕方以降いずれも、可能な範囲で柔軟に調整します
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-title">当日：カジュアル面談</div>
+        <div class="step-text">
+          - 所要時間：<strong>30分～1時間程度</strong>（ご都合に合わせて調整します）<br>
+          - 服装：スーツでなくても問題ありません。ビジネスカジュアル程度を想定しています。<br>
+          - 同席：ご紹介者（友人・知人など）がいれば、<strong>同席も歓迎</strong>です。<br><br>
+          面談は、堅い面接ではなく「双方向の対話」として進めます。
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-small">
+      <span class="inline-tag">
+        <span class="dot"></span>
+        面談後にそのまま選考へ進む必要はありません。持ち帰ってじっくり検討いただいて大丈夫です。
+      </span>
+    </div>
+  </section>
+
+  <!-- PREP -->
+  <section id="prep">
+    <div class="section-header">
+      <div class="section-label">Preparation</div>
+      <h2 class="section-title">事前準備は「聞きたいこと」だけでOK</h2>
+      <p class="section-desc">
+        カジュアル面談には、履歴書やスキルシートのご準備は不要です。
+      </p>
+    </div>
+
+    <div class="section-grid-2">
+      <div class="card">
+        <div class="card-icon">📝</div>
+        <div class="card-title">ご準備いただきたいこと</div>
+        <div class="card-text">
+          - 当日、<strong>聞いてみたいこと・確認したいこと</strong>を少しメモしておいていただけると、会話がより充実します。<br><br>
+          例：<br>
+          ・業界・会社について<br>
+          ・具体的な仕事内容や求められるスキル<br>
+          ・働き方や評価制度<br>
+          ・自分の経験でチャレンジできるポジション など
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">👔</div>
+        <div class="card-title">服装・持ち物について</div>
+        <div class="card-text">
+          - 服装はスーツでなくても構いません。ビジネスカジュアル程度を想定しています。<br>
+          - PCや資料の持ち込みも不要ですが、メモを取りたい方はノートやタブレットなどをご持参ください。<br>
+          - オンラインの場合は、静かな場所からのご参加をおすすめします。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section-header">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">よくある質問</h2>
+      <p class="section-desc">
+        カジュアル面談について、よくいただくご質問をまとめました。
+      </p>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Q. 未経験でも申し込んで大丈夫ですか？</div>
+        <div class="faq-a">
+          A. もちろんです。IT業界や当社の事業に興味をお持ちであれば、現時点でのスキル・経験は問いません。<br>
+          必要に応じて、どのような準備から始めるとよいかもお話しします。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. 今すぐ転職する予定はないのですが、それでも参加できますか？</div>
+        <div class="faq-a">
+          A. 問題ありません。情報収集の一環として、将来の選択肢を広げる目的でご参加いただいて構いません。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. カジュアル面談に参加したら、必ず選考に進まないといけませんか？</div>
+        <div class="faq-a">
+          A. その必要は一切ありません。面談はあくまで<strong>相互理解のための場</strong>です。<br>
+          面談後、「より詳しく知りたい」「選考に進みたい」と思っていただけた場合のみ、別途ご案内します。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. 紹介してくれた友人・知人と一緒に参加してもいいですか？</div>
+        <div class="faq-a">
+          A. はい、同席いただいて問題ありません。<br>
+          CLINKS社員からのご案内であれば、その社員に同席の旨とお名前をお伝えください。<br>
+          メールでお問い合わせいただく場合は、同席される方のお名前もあわせてご記載ください。
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Q. オンラインでの実施は可能ですか？</div>
+        <div class="faq-a">
+          A. 基本は本社会議室での対面実施を想定していますが、状況に応じてオンラインでの実施も対応いたします。<br>
+          ご希望があれば、CLINKS社員またはメールでその旨をお知らせください。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / ENTRY -->
+  <section id="entry" class="cta">
+    <div>
+      <div class="section-label">Entry</div>
+      <h2 class="cta-title">まずは一度、話してみませんか？</h2>
+      <p class="cta-text">
+        「少し気になる」「話を聞いてから考えたい」という段階の方でも、歓迎しています。<br>
+        IT業界や当社のこと、そしてこれからのキャリアについて、フラットにお話ししましょう。
+      </p>
+      <p class="cta-note">
+        ※カジュアル面談へのご参加が、そのまま応募・入社につながるわけではありません。<br>
+        あくまで、ご自身の納得感を高めるための場としてご活用ください。
+      </p>
+    </div>
+    <div class="cta-actions">
+      <a
+        href="mailto:sh-suzuki@clinks.jp?subject=IE事業部カジュアル面談のご相談"
+        class="btn-primary"
+      >
+        <span>メールで相談する</span>
+        <span class="icon">✉</span>
+      </a>
+      <div class="cta-secondary">
+        CLINKS社員からこのページをご案内された方は、<br>
+        その社員に「カジュアル面談を受けてみたい」とお伝えください。<br>
+        お名前と面談候補日時（2〜3候補）を共有いただけると、日程調整がスムーズです。<br><br>
+        社員からの案内ではなく、このページをきっかけに興味を持っていただいた方は、<br>
+        <a href="mailto:sh-suzuki@clinks.jp">sh-suzuki@clinks.jp</a> まで同様の内容をご連絡ください。
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © CLINKS株式会社IE事業部 / IE Division Casual Session
+  </footer>
+</main>
+</body>
+</html>
